@@ -47,7 +47,7 @@
   (if (empty? lst) (void) ;if lege lijst, stop.
       (begin
         (displayln (first lst)) ;laat eerste uit lijst zien
-        (send-command "/waarde" (list (+ (first lst) 60) (+ 48 (length lst)) (* (first lst) 110))) ;stuurt deze via OSC
+        (send-command "/waarde" (list (+ (first lst) 60) (* (first lst) 110) (+ 48 (length lst)))) ;stuurt deze via OSC
         (sleep (* (first lst) 0.1)) ; tijd er tussen
         (leesuitlijst (rest lst))))) ;rest gaat weer in de leesuitlijst
 
